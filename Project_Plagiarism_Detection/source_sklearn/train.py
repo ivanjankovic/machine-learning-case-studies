@@ -5,6 +5,9 @@ import os
 import pandas as pd
 
 from sklearn.externals import joblib
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LinearRegression
+from sklearn.svm import LinearSVC
 
 ## TODO: Import any additional libraries you need to define a model
 
@@ -56,12 +59,13 @@ if __name__ == '__main__':
     
 
     ## TODO: Define a model 
-    model = None
-    
+    model = RandomForestClassifier()
+#     model = LinearRegression()
+#     model = LinearSVC()
     
     ## TODO: Train the model
     
-    
+    model.fit(train_x, train_y)
     
     ## --- End of your code  --- ##
     
